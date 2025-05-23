@@ -22,9 +22,9 @@ const LoopText = ({ text = "about", separator = " • " }) => {
   }, [text, separator]);
 
   return (
-    <div className="text-neutral-900 text-8xl font-bold uppercase px-4 py-2 whitespace-nowrap overflow-hidden place-self-start">
+    <div className="text-neutral-800/30 md:text-9xl text-6xl font-bold uppercase px-4 py-2 whitespace-nowrap overflow-hidden place-self-center block md:absolute w-full opacity-100 pointer-events-none">
       {Array.from({ length: repeatCount }).map((_, i) => (
-        <span key={i} className="mx-2 inline-block">
+        <span key={i} className="mx-2 ">
           {text + separator}
         </span>
       ))}

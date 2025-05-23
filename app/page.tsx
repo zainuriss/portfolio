@@ -1,5 +1,6 @@
 import Image from "next/image";
-import MyImage from "../public/test.png";
+import MyImage from "../public/sample.png";
+import Logo from "../public/logo accent.png";
 import { EB_Garamond, Lexend } from "next/font/google";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -90,26 +91,42 @@ export default function Home() {
         {/* About Page */}
         <div
           id="about"
-          className={`flex flex-nowrap flex-row justify-around items-end min-h-screen w-full bg-neutral-800/30`}
+          className="relative w-full min-h-screen bg-neutral-900 text-white px-6 md:px-20 grid grid-cols-1 md:grid-cols-2 items-center gap-10"
         >
-          <LoopText />
+          {/* LoopText di background */}
+          {/* <LoopText /> */}
 
-          <div className="flex flex-row absolute w-full justify-around items-center">
-            <div className="w-1/2">
-              <h1 className="text-base text-white">
-                Seorang lulusan Rekayasa Perangkat Lunak yang energik, disiplin,
-                dan mampu bekerja dalam tim. Pengalaman organisasi membentuk
-                jiwa tanggung jawab dan keahlian dalam situasi kerja bawah
-                tekanan. Mempunyai pengetahuan dasar operasional komputer dan
-                terbiasa melakukan tugas dengan aturan sistematis serta efisien.
-                Semangat dalam mempelajari hal-hal baru dan dapat memberikan
-                dukungan maksimal bagi kesuksesan perusahaan.
-              </h1>
-            </div>
+          {/* TEXT SECTION */}
+          <div className="z-10 space-y-6">
+            <h1 className="text-4xl md:text-5xl font-bold leading-snug text-center md:text-left">
+              About me
+            </h1>
+            <p className={`$text-lg leading-relaxed text-gray-300 text-justify md:text-left`}>
+              Seorang lulusan{" "}
+              <span className="bg-[#82c0cc] text-neutral-900 font-semibold">
+                Rekayasa Perangkat Lunak
+              </span>{" "}
+              yang energik, disiplin, dan mampu bekerja dalam tim. Pengalaman
+              organisasi membentuk jiwa tanggung jawab dan keahlian dalam
+              situasi kerja bawah tekanan. Mempunyai pengetahuan dasar
+              operasional komputer dan terbiasa melakukan tugas dengan aturan
+              sistematis serta efisien. Semangat dalam mempelajari hal-hal baru
+              dan dapat memberikan dukungan maksimal bagi kesuksesan perusahaan.
+            </p>
+          </div>
 
-            <div className="text-white w-1/4">
-              <FontAwesomeIcon icon={["fas", "user"]} />
-            </div>
+          <div className="relative z-10 flex justify-center items-center bg-none md:bg-neutral-900">
+            <div className=""></div>
+            <Image
+            alt="logo"
+            src={Logo}
+            className="w-full"
+            />
+            <Image
+              alt="profile"
+              src={MyImage}
+              className="absolute h-full object-cover grayscale"
+            />
           </div>
         </div>
       </div>
