@@ -24,7 +24,7 @@ export default function Home() {
             <h1
               className={`lg:text-[15em]/50 text-8xl text-neutral-800/30 font-bold`}
             >
-              PORTO
+              PORT
             </h1>
             <h1
               className={`lg:text-[15em]/50 text-8xl text-neutral-800/30 font-bold`}
@@ -65,21 +65,21 @@ export default function Home() {
               <div className={`gap-4 lg:flex-col flex-row flex`}>
                 <a
                   href="#about"
-                  className="lg:text-base text-xs relative inline-block text-white font-semibold px-1 py-0 mx-[-1] transition-all duration-300 ease-in-out before:content-[''] before:absolute before:inset-0 before:bg-[#82c0cc] before:scale-x-0 before:origin-left before:transition-transform before:duration-300 before:ease-in-out hover:before:scale-x-100 hover:text-neutral-900 overflow-hidden rounded"
+                  className="lg:text-base text-xs relative inline-block text-white font-semibold px-1 py-0 mx-[-1] transition-all duration-300 ease-in-out before:content-[''] before:absolute before:inset-0 before:bg-[#82c0cc] before:scale-x-0 before:origin-left before:transition-transform before:duration-300 before:ease-in-out hover:before:scale-x-100 hover:text-neutral-900 overflow-hidden"
                 >
                   <span className="relative z-10">About me</span>
                 </a>
 
                 <a
                   href="#skills"
-                  className="lg:text-base text-xs relative inline-block text-white font-semibold px-1 py-0 mx-[-1] transition-all duration-300 ease-in-out before:content-[''] before:absolute before:inset-0 before:bg-[#82c0cc] before:scale-x-0 before:origin-left before:transition-transform before:duration-300 before:ease-in-out hover:before:scale-x-100 hover:text-neutral-900 overflow-hidden rounded"
+                  className="lg:text-base text-xs relative inline-block text-white font-semibold px-1 py-0 mx-[-1] transition-all duration-300 ease-in-out before:content-[''] before:absolute before:inset-0 before:bg-[#82c0cc] before:scale-x-0 before:origin-left before:transition-transform before:duration-300 before:ease-in-out hover:before:scale-x-100 hover:text-neutral-900 overflow-hidden"
                 >
                   <span className="relative z-10">Skills</span>
                 </a>
 
                 <a
                   href="#projects"
-                  className="lg:text-base text-xs relative inline-block text-white font-semibold px-1 py-0 mx-[-1] transition-all duration-300 ease-in-out before:content-[''] before:absolute before:inset-0 before:bg-[#82c0cc] before:scale-x-0 before:origin-left before:transition-transform before:duration-300 before:ease-in-out hover:before:scale-x-100 hover:text-neutral-900 overflow-hidden rounded"
+                  className="lg:text-base text-xs relative inline-block text-white font-semibold px-1 py-0 mx-[-1] transition-all duration-300 ease-in-out before:content-[''] before:absolute before:inset-0 before:bg-[#82c0cc] before:scale-x-0 before:origin-left before:transition-transform before:duration-300 before:ease-in-out hover:before:scale-x-100 hover:text-neutral-900 overflow-hidden"
                 >
                   <span className="relative z-10">Projects</span>
                 </a>
@@ -93,15 +93,13 @@ export default function Home() {
           id="about"
           className="relative w-full min-h-screen bg-neutral-900 text-white px-6 md:px-20 grid grid-cols-1 md:grid-cols-2 items-center gap-10"
         >
-          {/* LoopText di background */}
-          {/* <LoopText /> */}
 
           {/* TEXT SECTION */}
           <div className="z-10 space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold leading-snug text-center md:text-left">
               About me
             </h1>
-            <p className={`$text-lg leading-relaxed text-gray-300 text-justify md:text-left`}>
+            <p className={`md:text-lg text-xs leading-relaxed text-gray-300 text-justify md:text-left`}>
               Seorang lulusan{" "}
               <span className="bg-[#82c0cc] text-neutral-900 font-semibold">
                 Rekayasa Perangkat Lunak
@@ -115,17 +113,18 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative z-10 flex justify-center items-center bg-none md:bg-neutral-900">
-            <div className=""></div>
+          <div className="relative group md:z-10 z-0 flex justify-center items-center bg-none md:bg-neutral-900 h-full p-20">
+            <div className="bg-gradient-to-t from-neutral-900 to-transparent absolute z-20 w-full h-1/2 bottom-0"></div>
+            <div className="bg-gradient-to-t from-neutral-900 to-transparent absolute z-20 w-full h-1/2 bottom-0"></div>
             <Image
             alt="logo"
             src={Logo}
-            className="w-full"
+            className="absolute z-0 h-full object-contain w-full group-hover:opacity-100 opacity-0 transition-all duration-300 ease-in-out"
             />
             <Image
               alt="profile"
               src={MyImage}
-              className="absolute h-full object-cover grayscale"
+              className="absolute z-10 md:h-11/12 h-full object-cover grayscale"
             />
           </div>
         </div>
