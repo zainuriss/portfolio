@@ -26,3 +26,18 @@ html, body{
     --foreground: #ededed;
   }
 }
+
+@keyframes highlight {
+  0% {
+    background-color: transparent;
+    color: white;
+  }
+  100% {
+    background-color: #82c0cc;
+    color: #171717;
+  }  
+}
+
+.highlight-animate {
+  animation: highlight 1s ease-in-out forwards;
+}
