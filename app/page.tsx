@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
 import Avatar from "../public/ava.webp";
+import UPN from "../public/logo-upn.png";
 import Logo from "../public/logo accent.png";
-import { EB_Garamond, Lexend } from "next/font/google";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LoopText from "./components/LoopText";
 import { useEffect } from "react";
@@ -40,29 +41,38 @@ export default function Home() {
       >
         {/* Greeting Page */}
         <div className="flex flex-nowrap flex-row justify-around items-center min-h-screen w-full">
-          <div className="w-full flex flex-wrap flex-col justify-between md:max-w-5xl max-w-2xl px-4 space-y-10">
-            <div className="flex md:flex-row flex-col-reverse gap-y-4 items-center justify-between">
+          <div className="w-full flex flex-wrap flex-col justify-between md:max-w-5xl max-w-2xl px-8 space-y-10">
+            <div className="flex flex-row justify-between gap-4">
+              <a
+                href=""
+                className={`items-center w-max gap-4 flex-row flex text-white px-7 py-2 bg-[#82c0cc]/10 rounded-md border border-[#82c0cc]/30 backdrop-blur-2xl hover:bg-[#82c0cc]/25 hover:-translate-y-0.5 hover:border-[#82c0cc]/50 transition-all ease-in-out duration-300`}
+              >
+                <h1 className="text-sm">Portfolio</h1>
+                {/* <Image alt="logo univ" src={UPN} className="w-5" /> */}
+              </a>
+              <div className="flex flex-row gap-2">
+                <a
+                  href="https://wa.me/6289673799600"
+                  className={`items-center w-max gap-4 flex-row flex text-green-500 px-7 py-2 bg-green-500/10 rounded-md border border-green-500/30 backdrop-blur-2xl hover:bg-green-500/25 hover:-translate-y-0.5 hover:border-green-500/50 transition-all ease-in-out duration-300`}
+                >
+                  <FontAwesomeIcon icon={["fab", "whatsapp"]} className="" />
+                </a>
+                <a
+                  href="https://www.instagram.com/zainuriss_/"
+                  className={`items-center w-max gap-4 flex-row flex text-pink-600 px-7 py-2 bg-pink-600/10 rounded-md border border-pink-600/30 backdrop-blur-2xl hover:bg-pink-600/25 hover:-translate-y-0.5 hover:border-pink-600/50 transition-all ease-in-out duration-300`}
+                >
+                  <FontAwesomeIcon icon={["fab", "instagram"]} className="" />
+                </a>
+                <a
+                  href="mailto:zzainuri.me@gmail.com"
+                  className={`items-center w-max gap-4 flex-row flex text-blue-600 px-7 py-2 bg-blue-600/10 rounded-md border border-blue-600/30 backdrop-blur-2xl hover:bg-blue-600/25 hover:-translate-y-0.5 hover:border-blue-600/50 transition-all ease-in-out duration-300`}
+                >
+                  <FontAwesomeIcon icon={faEnvelope} className="" />
+                </a>
+              </div>
+            </div>
+            <div className="flex md:flex-row flex-col-reverse gap-y-10 items-center justify-between">
               <div className="flex flex-col space-y-4">
-                <div className="border border-[#82c0cc] rounded-md bg-[#4ca5b6] py-2 px-4 flex flex-row items-center md:place-self-start place-self-center gap-4 transition-all ease-in-out duration-300 w-max">
-                  <a
-                    href="https://wa.me/6289673799600"
-                    className="text-white transition-all ease-in-out duration-300 hover:scale-125 w-max text-center text-xl"
-                  >
-                    <FontAwesomeIcon icon={["fab", "whatsapp"]} />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/zainuriss_/"
-                    className="text-white transition-all ease-in-out duration-300 hover:scale-125 w-max text-center text-xl"
-                  >
-                    <FontAwesomeIcon icon={["fab", "instagram"]} />
-                  </a>
-                  <a
-                    href="mailto:zzainuri.me@gmail.com"
-                    className="text-white transition-all ease-in-out duration-300 hover:scale-125 w-max text-center text-xl"
-                  >
-                    <FontAwesomeIcon icon={["fas", "envelope"]} />
-                  </a>
-                </div>
                 <div className="flex flex-col leading-normal w-full">
                   <h1 className="text-white">Heyyo, </h1>
                   <h1
@@ -71,13 +81,23 @@ export default function Home() {
                     I'm Faiz Zainuri
                   </h1>
                   <p
-                    className={`md:text-base text-xs text-gray-300 text-left mt-2 max-w-xl`}
+                    className={`md:text-base text-sm text-gray-300 text-left mt-2 max-w-xl`}
                   >
                     A student from Indonesia, currently based in Yogyakarta. I'm
                     passionate about building responsive and accessible web
                     applications. I'm also interested in UI/UX design and web
                     performance optimization.
                   </p>
+                </div>
+                <div className="flex flex-row gap-4">
+                  <a
+                    href=""
+                    className={`items-center w-max gap-4 flex-row flex text-white px-7 py-2 bg-[#82c0cc]/10 rounded-md border border-[#82c0cc]/30 backdrop-blur-2xl hover:bg-[#82c0cc]/25 hover:-translate-y-0.5 hover:border-[#82c0cc]/50 transition-all ease-in-out duration-300`}
+                  >
+                    <h1 className="text-sm">Contact me</h1>
+                    <FontAwesomeIcon icon={["fas", "up-right-from-square"]} className="" />
+                    {/* <Image alt="logo univ" src={UPN} className="w-5" /> */}
+                  </a>
                 </div>
               </div>
               <div className="relative flex items-center justify-center">
@@ -90,9 +110,6 @@ export default function Home() {
                   />
                 </div>
               </div>
-            </div>
-            <div className={`gap-4 lg:flex-col flex-row flex`}>
-              <button></button>
             </div>
           </div>
         </div>
