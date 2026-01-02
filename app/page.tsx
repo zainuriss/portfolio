@@ -39,40 +39,41 @@ export default function Home() {
       <div
         className={`flex flex-col justify-center items-center min-h-screen bg-neutral-900 w-full`}
       >
-        {/* Greeting Page */}
-        <div className="flex flex-nowrap flex-row justify-around items-center min-h-screen w-full">
-          <div className="w-full flex flex-wrap flex-col justify-between md:max-w-5xl max-w-2xl px-8 space-y-10">
-            <div className="flex flex-row justify-between gap-4">
+        {/* Header */}
+        <header className="fixed top-0 z-[999] w-full flex justify-center my-4">
+          <nav className="z-1 w-11/12 flex flex-row justify-between gap-4 bg-neutral-100/10 rounded-md border border-neutral-50/30 backdrop-blur-2xl py-2 px-4">
               <a
                 href=""
                 className={`items-center w-max gap-4 flex-row flex text-white px-7 py-2 bg-[#82c0cc]/10 rounded-md border border-[#82c0cc]/30 backdrop-blur-2xl hover:bg-[#82c0cc]/25 hover:-translate-y-0.5 hover:border-[#82c0cc]/50 transition-all ease-in-out duration-300`}
               >
-                <h1 className="text-sm">Portfolio</h1>
-                {/* <Image alt="logo univ" src={UPN} className="w-5" /> */}
+                <Image alt="logo univ" src={Logo} className="w-5" />
+                <h1 className="text-sm md:block hidden">Faiz Zainuri</h1>
               </a>
               <div className="flex flex-row gap-2">
-                <a
-                  href="https://wa.me/6289673799600"
-                  className={`items-center w-max gap-4 flex-row flex text-green-500 px-7 py-2 bg-green-500/10 rounded-md border border-green-500/30 backdrop-blur-2xl hover:bg-green-500/25 hover:-translate-y-0.5 hover:border-green-500/50 transition-all ease-in-out duration-300`}
+                <button
+                  className={`cursor-pointer items-center w-max gap-4 flex-row flex text-red-500 p-2 bg-red-500/10 rounded-md border border-red-500/30 backdrop-blur-2xl hover:bg-red-500/25 hover:-translate-y-0.5 hover:border-red-500/50 transition-all ease-in-out duration-300`}
                 >
-                  <FontAwesomeIcon icon={["fab", "whatsapp"]} className="" />
-                </a>
-                <a
-                  href="https://www.instagram.com/zainuriss_/"
-                  className={`items-center w-max gap-4 flex-row flex text-pink-600 px-7 py-2 bg-pink-600/10 rounded-md border border-pink-600/30 backdrop-blur-2xl hover:bg-pink-600/25 hover:-translate-y-0.5 hover:border-pink-600/50 transition-all ease-in-out duration-300`}
+                  <FontAwesomeIcon icon={["fas", "language"]} className="" />
+                </button>
+                <button
+                  className={`hidden cursor-pointer items-center w-max gap-4 flex-row dark:flex text-yellow-600 p-2 bg-yellow-600/10 rounded-md border border-yellow-600/30 backdrop-blur-2xl hover:bg-yellow-600/25 hover:-translate-y-0.5 hover:border-yellow-600/50 transition-all ease-in-out duration-300`}
                 >
-                  <FontAwesomeIcon icon={["fab", "instagram"]} className="" />
-                </a>
-                <a
-                  href="mailto:zzainuri.me@gmail.com"
-                  className={`items-center w-max gap-4 flex-row flex text-blue-600 px-7 py-2 bg-blue-600/10 rounded-md border border-blue-600/30 backdrop-blur-2xl hover:bg-blue-600/25 hover:-translate-y-0.5 hover:border-blue-600/50 transition-all ease-in-out duration-300`}
+                  <FontAwesomeIcon icon={["fas", "sun"]} className="" />
+                </button>
+                <button
+                  className={`dark:hidden cursor-pointer items-center w-max gap-4 flex-row flex text-gray-600 p-2 bg-gray-600/10 rounded-md border border-gray-600/30 backdrop-blur-2xl hover:bg-gray-600/25 hover:-translate-y-0.5 hover:border-gray-600/50 transition-all ease-in-out duration-300`}
                 >
-                  <FontAwesomeIcon icon={faEnvelope} className="" />
-                </a>
+                  <FontAwesomeIcon icon={["fas", "moon"]} className="" />
+                </button>
               </div>
-            </div>
-            <div className="flex md:flex-row flex-col-reverse gap-y-10 items-center justify-between">
-              <div className="flex flex-col space-y-4">
+          </nav>
+        </header>
+
+        {/* Greeting Page */}
+        <div className="flex flex-nowrap flex-row justify-center items-center min-h-screen w-full">  
+          <div className="w-full flex flex-wrap flex-col justify-between md:max-w-5xl max-w-2xl px-8 space-y-10 mt-24 md:mt-0">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-y-10 items-center justify-between">
+              <div className="flex flex-col space-y-4 md:order-first order-last">
                 <div className="flex flex-col leading-normal w-full">
                   <h1 className="text-white">Heyyo, </h1>
                   <h1
@@ -95,21 +96,21 @@ export default function Home() {
                     className={`items-center w-max gap-4 flex-row flex text-white px-7 py-2 bg-[#82c0cc]/10 rounded-md border border-[#82c0cc]/30 backdrop-blur-2xl hover:bg-[#82c0cc]/25 hover:-translate-y-0.5 hover:border-[#82c0cc]/50 transition-all ease-in-out duration-300`}
                   >
                     <h1 className="text-sm">Contact me</h1>
-                    <FontAwesomeIcon icon={["fas", "up-right-from-square"]} className="" />
+                    <FontAwesomeIcon icon={["fas", "square-arrow-up-right"]} className="" />
                     {/* <Image alt="logo univ" src={UPN} className="w-5" /> */}
                   </a>
                 </div>
               </div>
-              <div className="relative flex items-center justify-center">
-                <div className="rounded-full border-4 border-[#82c0cc] bg-transparent md:w-72 md:h-72 w-56 h-56"></div>
-                <div className="absolute">
-                  <Image
-                    alt="profile"
-                    src={Avatar}
-                    className="rounded-full md:w-3xs w-48 object-cover group-hover:drop-shadow-md transition-all duration-500 ease-in-out"
-                  />
+              <div className="flex items-center justify-end">
+                <div className="flex items-center justify-center">
+                  <div className="rounded-full border-4 border-[#82c0cc] bg-transparent md:w-72 md:h-72 w-56 h-56"></div>
+                    <Image
+                      alt="profile"
+                      src={Avatar}
+                      className="absolute rounded-full md:w-3xs w-48 object-cover group-hover:drop-shadow-md transition-all duration-500 ease-in-out"
+                    />
                 </div>
-              </div>
+                </div>
             </div>
           </div>
         </div>
