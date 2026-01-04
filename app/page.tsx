@@ -6,7 +6,7 @@ import Logo from "../public/logo accent.png";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faCircle } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LoopText from "./components/LoopText";
 import { useEffect } from "react";
@@ -47,7 +47,7 @@ export default function Home() {
                 className={`items-center w-max gap-4 flex-row flex text-white px-7 py-2 bg-[#82c0cc]/10 rounded-md border border-[#82c0cc]/30 backdrop-blur-2xl hover:bg-[#82c0cc]/25 hover:-translate-y-0.5 hover:border-[#82c0cc]/50 transition-all ease-in-out duration-300`}
               >
                 <Image alt="logo univ" src={Logo} className="w-5" />
-                <h1 className="text-sm md:block hidden">Faiz Zainuri</h1>
+                {/* <h1 className="text-sm md:block hidden">Zainuriss</h1> */}
               </a>
               <div className="flex flex-row gap-2">
                 <button
@@ -76,11 +76,20 @@ export default function Home() {
               <div className="flex flex-col space-y-4 md:order-first order-last">
                 <div className="flex flex-col leading-normal w-full">
                   <h1 className="text-white">Heyyo, </h1>
-                  <h1
-                    className={`lg:text-4xl text-2xl flex flex-col font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#82c0cc] to-[#006494]`}
-                  >
-                    I'm Faiz Zainuri
-                  </h1>
+                  <div className="flex flex-row justify-between">
+                    <h1
+                      className={`lg:text-4xl text-2xl flex flex-col font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#82c0cc] to-[#006494]`}
+                    >
+                      I'm Faiz Zainuri
+                    </h1>
+                    <a
+                      href=""
+                      className={`items-center w-max gap-2 flex-row flex text-green-700 bg-green-700/10 px-3 py-1 rounded-full border border-green-700/30 backdrop-blur-2xl hover:bg-green-700/25 hover:-translate-y-0.5 hover:border-green-700/50 transition-all ease-in-out duration-300`}
+                    >
+                      <FontAwesomeIcon icon={faCircle} className="text-xs text-green-700" />
+                      <h1 className="text-xs md:block hidden">Ready for a challenge</h1>
+                    </a>
+                  </div>
                   <p
                     className={`md:text-base text-sm text-gray-300 text-left mt-2 max-w-xl`}
                   >
@@ -90,15 +99,24 @@ export default function Home() {
                     performance optimization.
                   </p>
                 </div>
-                <div className="flex flex-row gap-4">
-                  <a
-                    href=""
-                    className={`items-center w-max gap-4 flex-row flex text-white px-7 py-2 bg-[#82c0cc]/10 rounded-md border border-[#82c0cc]/30 backdrop-blur-2xl hover:bg-[#82c0cc]/25 hover:-translate-y-0.5 hover:border-[#82c0cc]/50 transition-all ease-in-out duration-300`}
-                  >
-                    <h1 className="text-sm">Contact me</h1>
-                    <FontAwesomeIcon icon={["fas", "square-arrow-up-right"]} className="" />
-                    {/* <Image alt="logo univ" src={UPN} className="w-5" /> */}
-                  </a>
+                <div className="flex flex-col gap-4 w-full">
+                  <div className="flex flex-row gap-4 ">
+                    <a
+                      href=""
+                      className={`items-center w-full gap-4 flex-row flex text-white px-7 py-2 bg-neutral-600/10 rounded-md border border-neutral-600/30 backdrop-blur-2xl hover:bg-neutral-600 hover:-translate-y-0.5 hover:border-neutral-600/50 transition-all ease-in-out duration-300`}
+                    >
+                      <h1 className="text-sm">Contact me</h1>
+                      <FontAwesomeIcon icon={["fas", "square-arrow-up-right"]} className="" />
+                    </a>
+                    <a
+                      href=""
+                      className={`relative items-center w-full gap-4 flex-row inline-flex text-white px-7 py-2 bg-neutral-600/10 rounded-md border border-neutral-600/30 backdrop-blur-2xl hover:bg-transparent hover:text-neutral-900 hover:-translate-y-0.5 hover:border-transparent transition-all ease-in-out duration-300 group overflow-hidden`}>
+                      <span className="w-56 h-64 rounded-md bg-linear-to-r from-[#82c0cc] to-[#006494] absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0 -z-10"></span>
+                      <h1 className="text-sm">See my project</h1>
+                      <FontAwesomeIcon icon={["fas", "chevron-right"]} className="" />
+                    </a>
+                  </div>
+                  
                 </div>
               </div>
               <div className="flex items-center justify-end">
