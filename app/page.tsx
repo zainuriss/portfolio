@@ -82,13 +82,6 @@ export default function Home() {
                     >
                       I'm Faiz Zainuri
                     </h1>
-                    <a
-                      href=""
-                      className={`items-center w-max gap-2 flex-row flex text-green-700 bg-green-700/10 px-3 py-1 rounded-full border border-green-700/30 backdrop-blur-2xl hover:bg-green-700/25 hover:-translate-y-0.5 hover:border-green-700/50 transition-all ease-in-out duration-300`}
-                    >
-                      <FontAwesomeIcon icon={faCircle} className="text-xs text-green-700" />
-                      <h1 className="text-xs md:block hidden">Ready for a challenge</h1>
-                    </a>
                   </div>
                   <p
                     className={`md:text-base text-sm text-gray-300 text-left mt-2 max-w-xl`}
@@ -100,26 +93,26 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-4 w-full">
-                  <div className="flex flex-row gap-4 ">
+                  <div className="flex flex-row gap-4">
                     <a
                       href=""
-                      className={`items-center w-full gap-4 flex-row flex text-white px-7 py-2 bg-neutral-600/10 rounded-md border border-neutral-600/30 backdrop-blur-2xl hover:bg-neutral-600 hover:-translate-y-0.5 hover:border-neutral-600/50 transition-all ease-in-out duration-300`}
+                      className={`items-center w-full flex-row flex text-white px-4 py-2 bg-neutral-600/10 rounded-md border border-neutral-600/30 backdrop-blur-2xl hover:bg-neutral-600 hover:-translate-y-0.5 hover:border-neutral-600/50 transition-all ease-in-out duration-300 justify-between`}
                     >
-                      <h1 className="text-sm">Contact me</h1>
-                      <FontAwesomeIcon icon={["fas", "square-arrow-up-right"]} className="" />
+                      <h1 className="md:text-sm text-xs">Contact me</h1>
+                      <FontAwesomeIcon icon={["fas", "square-arrow-up-right"]} className="md:text-sm text-xs" />
                     </a>
                     <a
                       href=""
-                      className={`relative items-center w-full gap-4 flex-row inline-flex text-white px-7 py-2 bg-neutral-600/10 rounded-md border border-neutral-600/30 backdrop-blur-2xl hover:bg-transparent hover:text-neutral-900 hover:-translate-y-0.5 hover:border-transparent transition-all ease-in-out duration-300 group overflow-hidden`}>
-                      <span className="w-56 h-64 rounded-md bg-linear-to-r from-[#82c0cc] to-[#006494] absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0 -z-10"></span>
-                      <h1 className="text-sm">See my project</h1>
-                      <FontAwesomeIcon icon={["fas", "chevron-right"]} className="" />
+                      className={`relative items-center w-full flex-row inline-flex text-white px-4 py-2 bg-neutral-600/10 rounded-md border border-neutral-600/30 backdrop-blur-2xl hover:bg-transparent hover:text-neutral-900 hover:-translate-y-0.5 hover:border-transparent transition-all ease-in-out duration-300 group overflow-hidden justify-between`}>
+                      <span className="w-72 h-64 rounded-md bg-linear-to-r from-[#82c0cc] to-[#006494] absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0 -z-10"></span>
+                      <h1 className="md:text-sm text-xs">My project</h1>
+                      <FontAwesomeIcon icon={["fas", "chevron-right"]} className="md:text-sm text-xs" />
                     </a>
                   </div>
                   
                 </div>
               </div>
-              <div className="flex items-center justify-end">
+              <div className="flex items-center md:justify-end justify-center">
                 <div className="flex items-center justify-center">
                   <div className="rounded-full border-4 border-[#82c0cc] bg-transparent md:w-72 md:h-72 w-56 h-56"></div>
                     <Image
@@ -133,32 +126,32 @@ export default function Home() {
           </div>
         </div>
 
-        {/* About Page */}
+        {/* Projects Page */}
         <div
-          id="about"
-          className="relative w-full min-h-screen bg-neutral-900 text-white px-6 md:px-20 grid grid-cols-1 md:grid-cols-2 items-center gap-10"
+          id="projects"
+          className="w-full min-h-screen bg-neutral-900 text-white flex justify-center items-center flex-col"
         >
-          <div className="z-10 space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold leading-snug text-center md:text-left">
-              About me
-            </h1>
-            <p
-              className={`md:text-lg text-xs leading-relaxed text-gray-300 text-justify md:text-left`}
-            >
-              Seorang lulusan{" "}
-              <span
-                id="highlightTextAnimated"
-                className="bg-[#82c0cc] text-neutral-900 font-semibold transition-colors duration-500"
-              >
-                Rekayasa Perangkat Lunak
-              </span>{" "}
-              yang energik, disiplin, dan mampu bekerja dalam tim. Pengalaman
-              organisasi membentuk jiwa tanggung jawab dan keahlian dalam
-              situasi kerja bawah tekanan. Mempunyai pengetahuan dasar
-              operasional komputer dan terbiasa melakukan tugas dengan aturan
-              sistematis serta efisien. Semangat dalam mempelajari hal-hal baru
-              dan dapat memberikan dukungan maksimal bagi kesuksesan perusahaan.
-            </p>
+          <div className="bg-neutral-800 rounded-md w-full p-4 m-4 flex flex-col items-start space-y-4 md:max-w-5xl max-w-2xl">
+            <div className="flex flex-row items-center gap-4">
+              <FontAwesomeIcon icon={["fas", "circle"]} className="text-base text-neutral-700" />
+              <h1 className="text-base font-semibold leading-snug text-center md:text-left">
+                Projects
+              </h1>
+            </div>
+
+            {/* Project Cards */}
+            <a href="" className="flex gap-4 bg-neutral-600 py-2 px-4 rounded-md w-1/2 hover:bg-neutral-700 hover:-translate-y-0.5 transition-all ease-in-out duration-300">
+              <div className="flex flex-row items-center gap-4 w-full">
+                <Image alt="project" src={UPN} className="rounded-md h-10 w-10"/>
+                <div className="flex flex-row w-full justify-between items-center">
+                  <div className="flex flex-col">
+                    <h2 className="">Project 1</h2>  
+                    <p className="text-neutral-400">Description</p>
+                  </div>
+                  <FontAwesomeIcon icon={["fas", "chevron-right"]} className="text-base" />
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
